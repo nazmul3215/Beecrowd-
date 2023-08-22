@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int N,z,i,tot,C,R,S;
+    char Ch;
+    //double x;
+    scanf("%d", &N);
+    tot = C = R = S = 0;
+    i =1;
+    while (N>=i)
+    {
+        scanf("%d %c", &z, &Ch);
+
+        tot +=z;
+
+        i++;
+        if (Ch == 'C'){
+          C += z;
+        }
+        if (Ch == 'R'){
+          R += z;
+        }
+        if (Ch == 'S'){
+          S += z;
+        }
+    }
+    printf ("Total: %d cobaias\n",tot);
+    printf ("Total de coelhos: %d\n",C);
+    printf ("Total de ratos: %d\n",R);
+    printf ("Total de sapos: %d\n",S);
+    printf ("Percentual de coelhos: %.2lf %%\n",(double)C/tot*100);
+    printf ("Percentual de ratos: %.2lf %%\n",(double)R/tot*100);
+    printf ("Percentual de sapos: %.2lf %%\n",(double)S/tot*100);
+    return 0;
+
+}
